@@ -1,0 +1,22 @@
+.login {
+    background: rgb(50,50,50);
+    background: linear-gradient(180deg, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login_template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 550px;
+    height: 100%;
+    background-color: #000;
+    margin-top: 100px;
+    border-radius: 35px;
+    font-family: 'Sansation Light';
+    padding-bottom: 100px;
+}

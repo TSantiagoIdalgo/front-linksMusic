@@ -1,0 +1,50 @@
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.navbar_navigates {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_navigates_links {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+.navbar_navigates_links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Sansation Light';
+}
+.navbar_navigates_links a:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.navbar_navigates_middle {
+    height: 50px;
+    width: 4px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.unknowImg  {
+    width: 60px;
+    cursor: pointer;
+}
+
+.unknowImg:hover {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(75%) saturate(2034%) hue-rotate(241deg) brightness(116%) contrast(105%);
+}
+
+.userImg {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

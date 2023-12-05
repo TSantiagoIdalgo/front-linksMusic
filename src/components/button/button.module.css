@@ -1,0 +1,15 @@
+.form_button {
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #323232;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px;
+    transition: border 100ms ease-in;
+}
+
+.form_button:hover {
+    border-color: #7648ffc7;
+}

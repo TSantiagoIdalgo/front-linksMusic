@@ -1,0 +1,84 @@
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.login_btn {
+    margin-left: 10px;
+    width: 45px;
+    height: 22px;
+    background-color: #1111;
+    border: none;
+    outline: 1px solid #fff;
+    border-radius: 9px;
+    display: flex;
+    cursor: pointer;
+}
+.login_btn_remember {
+    margin-left: 10px;
+    width: 45px;
+    height: 22px;
+    background-color: #1111;
+    border: none;
+    outline: 1px solid #fff;
+    border-radius: 9px;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-start;
+    animation-name: remember;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+.login_btn_remember span, .login_btn span {
+    background-color: #323232;
+    padding: 3px;
+    color: #323232;
+    -webkit-clip-path: circle(34.8% at 50% 50%);
+    clip-path: circle(34.8% at 50% 50%);
+}
+
+
+.login_btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    color: #fff;
+}
+
+.login_btns a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.login_btns a:hover {
+    color: #7648ffc7;
+    cursor: pointer;
+}
+
+
+.login_remember {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.login_error {
+    color: #7648ffc7;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes remember {
+    from {
+        justify-content: flex-start;
+    }
+    to {
+        background-color: #7648ffc7;
+        justify-content: flex-end;
+    }
+}

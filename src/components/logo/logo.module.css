@@ -1,0 +1,39 @@
+.navbar_logo {
+    width: 250px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.navbar_logo img{
+    width: 80px;
+    height: 80px;
+    transform: rotate(90deg);
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-fill-mode:none;
+    animation-iteration-count: infinite;
+    
+}
+
+.navbar_logo h1 {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Sansation Light';
+}
+
+.navbar_logo h1:hover {
+    color: #aaa;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        filter: brightness(0) saturate(100%) invert(24%) sepia(75%) saturate(2034%) hue-rotate(241deg) brightness(116%) contrast(105%);
+    }
+}
