@@ -7,7 +7,3 @@
     font-family: 'Sansation Light';
     src: url('../public/Sansation_Light.ttf') format('truetype');
 }
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';

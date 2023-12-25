@@ -1,10 +1,11 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 
 function App() {
-  return (
-    <div className="">
-      hola
-    </div>
+return (
+  <Routes>
+    <Route path="/" element={<h1>Home</h1>} />
+  </Routes>
   )
 }
 
