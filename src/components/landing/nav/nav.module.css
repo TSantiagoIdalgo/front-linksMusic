@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: 'Sansation Light';
+    font-size: 1.5rem;
+}
+
+.navLinks a:hover {
+    color: #7648ffc7;
+}
+
+.userIcon {
+    width: 100px;
+    height: 100%;
+    margin: 10px;
+    border-left: 6px solid #fff;
+}
+
+.userIcon img{
+    width: 80px;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.userIcon img:hover {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(82%) saturate(5734%) hue-rotate(243deg) brightness(99%) contrast(107%);
+}
