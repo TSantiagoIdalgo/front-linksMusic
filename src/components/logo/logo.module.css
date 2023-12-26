@@ -5,6 +5,8 @@
     font-family: 'Sansation Light';
     display: flex;
     align-items: center;
+    cursor: pointer;
+    z-index: 100;
 }
 
 .logo img {
@@ -15,4 +17,8 @@
 
 .logo h1{
     font-size: 2rem;
+}
+
+.logo:hover {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(0%) saturate(29%) hue-rotate(135deg) brightness(100%) contrast(79%);
 }

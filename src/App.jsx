@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom'
-import Landing from './components/landing/landing'
+import Main from './components/landing/main/main'
+import Footer from './components/landing/footer/footer'
 import './App.css'
 
 function App() {
 return (
   <Routes>
-    <Route path="/" element={<Landing/>} />
+    <Route path="/" element={[<Main key={0}/>, <Footer key={1}/>]} />
   </Routes>
   )
 }

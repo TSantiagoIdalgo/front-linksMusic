@@ -7,13 +7,14 @@ const MainSection = () => {
     return (
     <section className={Style.mainSection}>
       <Nav/>
-      <div className={Style.main_info}>
+      <article className={Style.main_info}>
         <div className={Style.main_info_text}>
           <p>Listen and download all the music you want</p>
           <SecondaryButton text="Get Started" style={{ width: '300px' }}/>
         </div>
         <img src={PhoneImage} alt="phone" />
-      </div>
+      </article>
+      <div className={Style.landing_clip_path}/>
     </section>
   )
 }
