@@ -1,22 +1,22 @@
 .extendedNav {
-    background-color: #111;
+    background-color: #000;
     position: fixed;
     top: 0;
     color: #fff;
     height: 100vh;
     width: 100%;
-    opacity: .8;
+    opacity: .80;
     display: flex;
     justify-content: center;
     animation-name: extend;
-    animation-duration: 0.5s;
+    animation-duration: .6s;
     animation-fill-mode: forwards;
 }
 
 
 @keyframes extend {
     from {
-        clip-path: circle(0% at 50% 50%);
+        clip-path: circle(0% at 100% 0);
     }
     to {
         clip-path: circle(100% at 50% 50%);
