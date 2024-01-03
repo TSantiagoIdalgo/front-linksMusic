@@ -3,6 +3,7 @@ import Logo from '../../logo/logo'
 import RegisterData from './registerData/registerData'
 import Registered from './registered/registered'
 import { useQuery } from '../../../hooks/helpers/user/register'
+import { Link } from 'react-router-dom'
 
 
 export default function Register() {
@@ -10,7 +11,9 @@ export default function Register() {
     return (
         <div className={Style.register}>
             <nav className={Style.register_nav}>
-                <Logo/>
+                <Link to={'/'}>
+                    <Logo/>
+                </Link>
             </nav>
             <div className={Style.template}>
                 { registered === 'true'
