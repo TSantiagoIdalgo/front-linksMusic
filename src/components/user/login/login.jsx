@@ -9,6 +9,7 @@ import ReactFacebookLogin from 'react-facebook-login'
 export default function Login() {
   const clientId = useGoogle()
   const { fbId, success, error } = useFacebook()
+
   return (
     <div className={Style.login}>
       <nav className={Style.login_nav}>
@@ -27,9 +28,9 @@ export default function Login() {
             />
             <ReactFacebookLogin
               appId={fbId}
-              autoLoad={false}
               callback={success}
               onFailure={error}
+              fields="name,email,picture"
               textButton='Login with Facebook'
               icon="fa-facebook"
               cssClass={Style.login_facebook_button}

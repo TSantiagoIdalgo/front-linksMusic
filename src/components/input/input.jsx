@@ -1,6 +1,6 @@
 import Style from './input.module.css'
 
-export default function Input({ info, name, type, error}) {
+export default function Input({ info, name, type, error, style}) {
     return (
       <div className={Style.group}>
         <input
@@ -9,6 +9,7 @@ export default function Input({ info, name, type, error}) {
           className={Style.input}
           placeholder=" "
           type={type}
+          style={style}
         />
         <label htmlFor={name} className={Style.label}>
           {name}

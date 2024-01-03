@@ -1,0 +1,12 @@
+.registerData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.passwords {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

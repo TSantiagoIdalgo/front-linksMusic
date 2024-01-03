@@ -13,8 +13,8 @@ export default function LoginData() {
             <Input info={register('email')} error={errors.email?.message} name={'Email adress'} type={'email'}/>
             <Input info={register('password')} error={errors.password?.message} name={'Password'} type={'password'}/>
             <div className={Style.login_form_buttons}>
-                <PrimaryButton text='Register' onClick={() => navigate('/register')}/>
-                <PrimaryButton text='Login'/>
+                <PrimaryButton type='button' text='Register' onClick={() => navigate('/register?registered=false')}/>
+                <PrimaryButton type='submit' text='Login'/>
             </div>
         </form>
     )
