@@ -17,9 +17,9 @@ const Nav = () => {
          <NavLink to='#'>Music Player</NavLink>
          <NavLink to='#'>Download</NavLink>
          <NavLink to='#'>About</NavLink>
-         <figure className={Style.userIcon}>
+         <NavLink to='/login' className={Style.userIcon}>
           <img src={userIcon} alt="user" />
-          </figure>
+          </NavLink>
         </div>
       : <button onClick={() => handleChange(!handle)} className={Style.navBtn}>
         {handle ? 'x' : '≡'}

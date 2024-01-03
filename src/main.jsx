@@ -8,7 +8,7 @@ const client = new ApolloClient({
     connectToDevTools: true,
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: import.meta.env.API_KEY
+      uri: import.meta.env.VITE_API_KEY
     })
 })
 
