@@ -1,0 +1,17 @@
+.time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.time input {
+    width: 400px;
+    height: 4px;
+    cursor: pointer;
+}
+
+.time span {
+    font-size: 20px;
+    width: 32px;
+}

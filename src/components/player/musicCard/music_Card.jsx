@@ -4,7 +4,7 @@ import { usePlayCurrent } from '../../../hooks/products/getPlayMusic';
 
 export default function MusicCard(music) {
   const { id, name, album, duration, image } = music.music;
-  const { getMusicUrl } = usePlayCurrent(music, id);
+  const { getMusicUrl } = usePlayCurrent(music.music, id);
 
     function secondsToMinutes(seg) {
       let segundos = parseInt(seg)
