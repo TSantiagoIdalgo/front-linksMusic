@@ -9,3 +9,8 @@ export const LOGIN_USER = gql`
     }
     
 `
+export const GOOGLE_LOGIN = gql`
+    query getGoogleLogin($email: String!, $userName: String!) {
+      getUserNetworkLogin(email: $email, userName: $userName)
+    }
+`

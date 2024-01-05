@@ -1,0 +1,45 @@
+.button_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.button_active {
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #323232;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+
+.button {
+    width: 250px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.img {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    bottom: 11px;
+}

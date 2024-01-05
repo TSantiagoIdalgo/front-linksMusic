@@ -18,7 +18,6 @@
 }
 
 .infoSection_p h2 {
-    font-size: 2rem;
     z-index: 50;
 }
 
@@ -27,7 +26,6 @@
 }
 
 .infoSection_p p {
-    font-size: 1.2rem;
     z-index: 50;
 }
 
@@ -46,8 +44,8 @@
     }
 }
 
-@media only screen and (min-width: 1400px) {
-    .infoSection_p h2 {
+@media only screen and (min-width: 1500px) {
+    .infoSection_p h2, span {
         font-size: 3rem;
     }
     

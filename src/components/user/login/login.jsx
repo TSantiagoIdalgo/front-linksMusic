@@ -8,7 +8,7 @@ import GoogleLogin from 'react-google-login'
 import ReactFacebookLogin from 'react-facebook-login'
 
 export default function Login() {
-  const clientId = useGoogle()
+  const { clientId, signIn, signFailure } = useGoogle()
   const { fbId, success, error } = useFacebook()
 
   return (
@@ -24,8 +24,8 @@ export default function Login() {
           <GoogleLogin
             clientId={clientId}
             buttonText="Login with Google"
-            onSuccess={responseGoogle => console.log(responseGoogle)}
-            onFailure={responseGoogle => console.log(responseGoogle)}
+            onSuccess={signIn}
+            onFailure={signFailure}
             cookiePolicy={'single_host_origin'}
             className={Style.login_google_button}
           />

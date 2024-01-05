@@ -1,0 +1,60 @@
+.data {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: 33.33%;
+}
+
+.data img {
+    width: 140px;
+    margin-left: 10px;
+    border-radius: 8px;
+    z-index: 50;
+}
+
+.data_tittle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    overflow: hidden;
+}
+
+.data_tittle h2 {
+    color: #fff;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: tittle 15000ms linear infinite;
+    animation-delay: 15000ms;
+}
+
+
+@keyframes tittle {
+    0% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    20% {
+        transform: translateX(-350px);
+        visibility: hidden;
+    }
+
+    40% {
+        transform: translateX(350px);
+        visibility: hidden;
+    }
+
+    60% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}

@@ -10,7 +10,7 @@ const MainSection = () => {
       <article className={Style.main_info}>
         <div className={Style.main_info_text}>
           <p>Listen and download all the music you want</p>
-          <SecondaryButton text="Get Started" style={{ width: '300px' }}/>
+          <SecondaryButton text="Get Started" style={{ width: '225px', height: '50px' }}/>
         </div>
         <img src={PhoneImage} alt="phone" />
       </article>

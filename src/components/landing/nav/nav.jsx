@@ -9,16 +9,20 @@ import ExtendedNav from './extendedNav/extendedNav'
 const Nav = () => {
   const [handle, handleChange] = useState(false)
   const widthVW = useWindowSize()
+  const userImg = window.localStorage.getItem('user')
+
   return (
     <nav className={Style.nav}>
       <Logo/>
       {widthVW >= 800 
       ? <div className={Style.navLinks}>
-         <NavLink to='#'>Music Player</NavLink>
+         <NavLink to='/musicplayer'>Music Player</NavLink>
          <NavLink to='#'>Download</NavLink>
          <NavLink to='#'>About</NavLink>
          <NavLink to='/login' className={Style.userIcon}>
-          <img src={userIcon} alt="user" />
+          { userImg !== null 
+          ? <img src={userImg} alt='user img' className={Style.user_picture_active}/>
+          : <img src={userIcon} alt='user icon' className={Style.user_picture}/>}
           </NavLink>
         </div>
       : <button onClick={() => handleChange(!handle)} className={Style.navBtn}>

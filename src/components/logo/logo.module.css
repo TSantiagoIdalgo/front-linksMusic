@@ -1,5 +1,5 @@
 .logo {
-    width: 280px;
+    width: 210px;
     height: 80px;
     color: #eee;
     font-family: 'Sansation Light';
@@ -16,7 +16,7 @@
 }
 
 .logo h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .logo:hover {

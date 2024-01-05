@@ -25,10 +25,12 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    font-size: 3rem;
-    color: #eee;
-    font-family: 'Sansation Light';
     margin: 120px 60px 0 60px;
+}
+
+.main_info_text p{
+    font-size: 2.5vw;
+    color: #eee;
 }
 
 .landing_clip_path {
@@ -63,5 +65,8 @@
         width: 100%;
         object-fit: contain;
         padding: 10px;
+    }
+    .main_info_text p {
+        font-size: 2rem;
     }
 }

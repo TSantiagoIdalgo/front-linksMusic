@@ -1,0 +1,36 @@
+.cardMusic {
+    display: flex;
+    color: #fff;
+    width: 80%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+    transition: background-color 150ms ease-in-out;
+}
+
+.card_tittle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 33%;
+}
+
+.card_tittle img {
+    width: 100px;
+    border-radius: 6px;
+}
+
+.card_tittle h2{
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cardMusic:hover {
+    background-color: #272727;
+}

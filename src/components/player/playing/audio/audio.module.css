@@ -1,0 +1,23 @@
+.audio {
+    width: 33.33%;
+    position: relative;
+}
+
+
+.audio_change img{
+    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 25px;
+    bottom: -15px;
+    cursor: pointer;
+}
+
+.audio_change input {
+    position: absolute;
+    right: -25px;
+    bottom: 80px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+}

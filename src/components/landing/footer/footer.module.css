@@ -10,7 +10,6 @@
 .footerContainer h2 {
     color: #eee;
     font-family: 'Sansation Light';
-    font-size: 20px;
     margin: 10px;
 }
 
@@ -23,7 +22,6 @@
     color: #eee;
     display: flex;
     flex-direction: column;
-    font-size: 1.7rem;
     font-family: 'Sansation Light';
     margin-top: 25px;
     gap: 20px;
