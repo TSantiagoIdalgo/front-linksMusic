@@ -13,12 +13,13 @@ export default function Controls (props) {
   const { time, currentTime, playing, togglePlay, newTime, music, setCurrentTime } = props
   const { nextSong } = useNext(music)
   const { prevSong } = usePrev(music, currentTime, setCurrentTime)
+
   return (
     <div className={Style.controls}>
       <div className={Style.buttons}>
         <img src={randomIcon} alt="random" className={Style.button_random} />
         <img src={prevIcon} alt='prev' className={Style.button_prev} onClick={prevSong}/>
-        <button onClick={() => togglePlay()} className={Style.button_play}>
+        <button onClick={togglePlay} className={Style.button_play}>
           {playing 
           ? <img src={pauseIcon} alt="pause" />
           : <img src={playIcon} alt="play" />}

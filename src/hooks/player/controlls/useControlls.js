@@ -1,9 +1,11 @@
 import { useEffect, useState, useCallback  } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { setPlay } from '../../state/features/music/playingSlice'
 
 
 export const useControlls = (audioRef) => {
     const {data} = useSelector(state => state.play)
+
     const [currentTime, setCurrentTime] = useState(0)
     const [progress, setProgress] = useState(0)
 
@@ -35,7 +37,8 @@ export const useControlls = (audioRef) => {
 }
 
 export const UsetogglePlay = (audioRef) => {
-    const [playing, setPlaying] = useState(false)
+    const dispatch = useDispatch()  
+    const { playing } = useSelector(state => state.play)
     const [volume, setVolume] = useState(1)
     const { data } = useSelector(state => state.play)
     const togglePlay = useCallback(() => {
@@ -44,12 +47,12 @@ export const UsetogglePlay = (audioRef) => {
 
         if (audio.paused) {
             audio.play();
-            setPlaying(true);
+            dispatch(setPlay(true))
         } else {
             audio.pause();
-            setPlaying(false);
+            dispatch(setPlay(false))
         }
-    }, [data])
+    }, [data, audioRef.current])
 
     const volumeChange = useCallback((e) => {
         if ( data === null) return;
