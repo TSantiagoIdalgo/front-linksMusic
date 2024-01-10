@@ -34,3 +34,23 @@
 .cardMusic:hover {
     background-color: #272727;
 }
+
+.cardMusic_responsive {
+    width: 30vw;
+    
+}
+
+.cardMusic_responsive h2 {
+    font-size: 1rem;
+}
+
+.cardMusic_responsive h3 {
+    font-size: .8rem;
+    color: #ccc;
+}
+
+@media only screen and (max-width: 600px) {
+    .cardMusic {
+        width: 100%;
+    }
+}

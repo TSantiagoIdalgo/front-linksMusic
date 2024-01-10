@@ -2,10 +2,11 @@
     display: flex;
     position: relative;
     align-items: center;
+    width: 50%;
 }
 
 .searchbar input{
-    width: 500px;
+    width: 100%;
     height: 40px;
     border-radius: 10px;
     background-color: #272727;

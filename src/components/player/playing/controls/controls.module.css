@@ -24,22 +24,23 @@
 }
 
 .button_play img {
-    width: 50px;
+    width: 3vw;
 }
 
 .button_prev {
     filter: brightness(0) saturate(100%) invert(74%) sepia(1%) saturate(53%) hue-rotate(139deg) brightness(94%) contrast(85%);
-    width: 50px;
+    width: 3vw;
     cursor: pointer;
 }
 
 .button_next {
     filter: brightness(0) saturate(100%) invert(74%) sepia(1%) saturate(53%) hue-rotate(139deg) brightness(94%) contrast(85%);
-    width: 50px;
+    width: 3vw;
     cursor: pointer;
 }
 
 .button_random {
+    width: 1.5vw;
     transform: rotate(180deg);
     filter: brightness(0) saturate(100%) invert(74%) sepia(1%) saturate(53%) hue-rotate(139deg) brightness(94%) contrast(85%);
     cursor: pointer;
@@ -47,6 +48,7 @@
 
 .button_repeat {
     cursor: pointer;
+    width: 2vw;
     filter: brightness(0) saturate(100%) invert(74%) sepia(1%) saturate(53%) hue-rotate(139deg) brightness(94%) contrast(85%);
 }
 

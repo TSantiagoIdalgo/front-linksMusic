@@ -12,9 +12,9 @@ export default function ListComponent() {
     }
   }
     return (
-    <ul className="main">
+    <div className="main">
       {locationRender()}
-    </ul>
+    </div>
   );
 
 }

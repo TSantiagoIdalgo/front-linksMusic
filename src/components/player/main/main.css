@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     border-bottom: 2px solid #fff;
 }
   
@@ -33,4 +33,22 @@
     min-height: calc(100vh - 80px);
     height: 100%;
     overflow-y: scroll;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 75px 1fr 1fr
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid; 
+        grid-template-columns: 50% 50%; 
+        grid-template-rows: 80px 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        "nav nav"
+        "main main"; 
+    }
 }

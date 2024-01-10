@@ -22,3 +22,17 @@
 .logo:hover {
     filter: brightness(0) saturate(100%) invert(89%) sepia(0%) saturate(29%) hue-rotate(135deg) brightness(100%) contrast(79%);
 }
+
+@media only screen and (max-width: 1024px) {
+    .logo {
+        justify-content: flex-start;
+        margin-left: 10px;
+        width: min-content;
+    }
+    .logo h1 {
+        display: none;
+    }
+    .logo img {
+        transform: none;
+    }
+}
