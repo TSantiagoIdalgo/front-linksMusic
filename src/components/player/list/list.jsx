@@ -1,12 +1,19 @@
-import { useLocation } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Home from "../home/home";
 
 export default function ListComponent() {
-  const location = useLocation().pathname.split('/')[2]
-
+  const { id } = useParams();
+  const locationRender = () => {
+    switch (id) {
+      case 'home':
+        return <Home/>;
+      default:
+        return <Navigate to="/musicplayer/home"/>;
+    }
+  }
     return (
     <ul className="main">
-      {location === 'home' ? <Home /> : null}
+      {locationRender()}
     </ul>
   );
 
