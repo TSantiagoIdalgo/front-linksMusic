@@ -1,9 +1,10 @@
 .logo {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.logo button {
+.button {
     background-color: transparent;
     border: none;
     color: #fff;
@@ -14,14 +15,14 @@
     display: none;
 }
 
-.logo button:active {
+.button:active {
     color: #ccc;
     background-color: #323232;
     border-radius: 20%;
 }
 
-@media only screen and (max-width: 600px) {
-    .logo button {
+@media only screen and (max-width: 1024px) {
+    .button {
         display: inline-block;
     }
 }

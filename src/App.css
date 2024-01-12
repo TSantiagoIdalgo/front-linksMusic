@@ -25,21 +25,3 @@
   ::-webkit-scrollbar-track {
     background: #333 ;
   }
-
-  @media only screen and (min-width: 1500px) {
-    * {
-      font-size: 1rem
-    }
-  }
-
-@media only screen and (max-width: 600px) {
- * {
-    font-size: 1.5rem
-  }
-  }
-
-@media only screen and (max-width: 800px) {
-  * {
-    font-size: 1rem
-  }
-}
