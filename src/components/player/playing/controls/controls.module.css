@@ -59,3 +59,11 @@
 .button_play:hover {
     background-color: #fff;
 }
+
+.buttons_time {
+    font-size: 1rem;
+    color: #fff;
+    width: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -16,7 +16,7 @@ const Nav = () => {
       <Logo/>
       {widthVW >= 800 
       ? <div className={Style.navLinks}>
-         <NavLink to='/musicplayer'>Music Player</NavLink>
+         <NavLink to='/musicplayer/home'>Music Player</NavLink>
          <NavLink to='#'>Download</NavLink>
          <NavLink to='#'>About</NavLink>
          <NavLink to='/login' className={Style.userIcon}>

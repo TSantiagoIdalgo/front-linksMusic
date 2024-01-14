@@ -1,22 +1,27 @@
 import Style from './play.module.css'
+import { useRef, useEffect, useState } from 'react';
 
-export default function PlayControlls ({ currentTime, newTime, time}) {
-  
-    function secondsToMinutes(seg) {
-      let segundos = parseInt(seg)
-      let minutes = Math.floor(segundos / 60);
-      let seconds = segundos % 60;
-      return `${minutes}:${seconds}`;
-    }
+export default function PlayControlls ({ currentTime, newTime, time }) {
+  const [backgroundWidth, setBackgroundWidth] = useState(0);
+  const rangeRef = useRef(null);
+  useEffect(() => {
+    const range = rangeRef.current;
+    const value = range.value;
+    const min = range.min || 0;
+    const max = range.max || 100;
+    const percentage = ((value - min) / (max - min)) * 100;
+    const thumbPosition = (range.offsetWidth * percentage) / 100;
+    setBackgroundWidth(thumbPosition);
+}, [currentTime])
     return (
       <div className={Style.time}>
-          <span>{secondsToMinutes(currentTime)}</span>
-          <input type="range" value={currentTime} onChange={newTime}
+          <input className={Style.time_input} type="range" value={currentTime} onChange={newTime}
           max={time}
           min={0}
           step={0.1}
+          ref={rangeRef}
           />
-          <span>{secondsToMinutes(time)}</span>
+          <div className={Style.principal_time} style={{width: `${backgroundWidth}px`}} />
         </div>
     )
   }

@@ -5,16 +5,13 @@ import { setPlay } from '../../state/features/music/playingSlice'
 
 export const useControlls = (audioRef) => {
     const {data} = useSelector(state => state.play)
-
     const [currentTime, setCurrentTime] = useState(0)
     const [progress, setProgress] = useState(0)
-
     useEffect(() => {
         if ( data === null || audioRef?.current === null) return;
         const audio = audioRef.current;
         const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
-        const handleProgress = () => setProgress(audio.duration);
-
+        const handleProgress = () => setProgress(audio.duration)
         audio.addEventListener("timeupdate", handleTimeUpdate);
         audio.addEventListener("durationchange", handleProgress);
 
@@ -27,11 +24,11 @@ export const useControlls = (audioRef) => {
     const newTime = useCallback((e) => {
         if ( data === null || audioRef?.curent === null) return;
         const newTime = e.target.value;
-
         audioRef.current.currentTime = newTime;
         setCurrentTime(newTime);
     
     },[data])
+    
 
     return { currentTime, progress, data, newTime }
 }

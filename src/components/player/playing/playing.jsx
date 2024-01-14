@@ -13,7 +13,6 @@ export default function Playing() {
     const { togglePlay, playing, volume, volumeChange } = UsetogglePlay(audioRef)
     const { nextSong } = useNext(data)
     if (data === null || data === undefined) return <></>
-    
     return (
         <div className={Style.container}>
             <audio ref={audioRef} src={data.url} autoPlay onEnded={nextSong}/>
