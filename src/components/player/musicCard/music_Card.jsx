@@ -1,7 +1,7 @@
 import Style from './music_Card.module.css'
 import { usePlayCurrent } from '../../../hooks/products/getPlayMusic';
 import { useWindowSize } from '../../../hooks/window/useWindow';
-
+import undefinedIcon from '../../../assets/icons/player/undefinedIcon.png'
 
 export default function MusicCard(music) {
   const { id, name, album, duration, image } = music.music;
@@ -17,7 +17,11 @@ export default function MusicCard(music) {
   return (
     <figure className={Style.cardMusic} onClick={getMusicUrl}>
       <div className={Style.card_tittle}>
-        <img src={image} alt={name} />
+        {image 
+        ? <img src={image} alt={name} /> 
+        : <div className={Style.undef}>
+           <img src={undefinedIcon} alt={name}/>
+          </div>}
         { width >= 1024 
         ? <h2>{name}</h2>
         : <div className={Style.cardMusic_responsive}>
