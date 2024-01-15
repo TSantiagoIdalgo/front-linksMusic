@@ -15,7 +15,6 @@ export const usePlayCurrent = (music, id) => {
           const musicId = id.split('-').join('') + '.mp3'
   
           const { data } = await getUrl({ variables: { getMusicUrlId: email, name: musicId } })
-
           dispatch(getPlay({...music, url: data.getMusicURL}))
         } catch (error) {
         dispatch(getPlayFailure(error))

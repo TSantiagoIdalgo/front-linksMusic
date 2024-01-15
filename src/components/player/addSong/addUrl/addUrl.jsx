@@ -6,7 +6,7 @@ export default function AddUrl() {
     return (
         <form className={Style.addUrl} onSubmit={handleSubmit(onSubmit)}>
             <div className={Style.addUrl_input}>
-              <input type="text" placeholder='Enter url' {...register('url')} />
+              <input type="text" placeholder='Upload with youtube url' {...register('url')} />
               <button className={Style.addUrl_submit}>Upload</button>
               <button className={Style.addUrl_clean} type='button' onClick={clean}>X</button>
               <span className={Style.addUrl_error}>{errors.url?.message}</span>

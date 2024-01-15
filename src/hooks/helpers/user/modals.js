@@ -4,7 +4,7 @@ import "toastify-js/src/toastify.css"
 
 export const Click = () => Toastify({
     text: "Uploading...",
-    duration: 20000,
+    duration: 16000,
     newWindow: true,
     close: false,
     gravity: "bottom", // `top` or `bottom`

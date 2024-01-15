@@ -14,7 +14,6 @@ export default function MusicCard(music) {
       let seconds = segundos % 60;
       return `${minutes}:${seconds}`;
     }
-
   return (
     <figure className={Style.cardMusic} onClick={getMusicUrl}>
       <div className={Style.card_tittle}>

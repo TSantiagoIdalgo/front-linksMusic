@@ -29,7 +29,6 @@ export const useUploadURL = () => {
             dispatch(cleanUploading())
             Finish()
         } catch (error) {
-            console.log(error.message);
             Error(error.message)
             dispatch(cleanUploading())
         } 
