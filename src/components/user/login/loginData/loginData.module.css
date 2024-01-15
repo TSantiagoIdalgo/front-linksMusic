@@ -3,12 +3,14 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
     padding-top: 10px;
 }
 
 .login_remind_buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .login_remind_button {
@@ -44,9 +46,16 @@
 .login_remind_active {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
+.login_remind_active span {
+    font-size: 1rem;
+} 
+.login_remind_button span {
+    font-size: 1rem;
+}
 
 .login_remind_active button{
     width: 50px;
@@ -75,6 +84,7 @@
 
 .login_forgot {
     color: #fff;
+    font-size: 1rem;
 }
 
 .login_forgot:hover {
@@ -97,5 +107,18 @@
     }
     100% {
         left: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .login_remind_active span {
+        font-size: 3rem;
+    } 
+    .login_forgot {
+        font-size: 3rem;
+    }
+
+    .login_remind_button span {
+        font-size: 3rem;
     }
 }

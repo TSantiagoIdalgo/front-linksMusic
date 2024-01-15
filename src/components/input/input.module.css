@@ -50,4 +50,22 @@
     bottom: -15px;
     left: 10px;
     position: absolute;
+    font-size: 1rem;
   }
+
+@media only screen and (max-width: 1024px) {
+  .group span {
+      font-size: 1.5rem;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 90%;
+
+  }
+
+  .group span {
+    font-size: 3rem;
+  }
+}

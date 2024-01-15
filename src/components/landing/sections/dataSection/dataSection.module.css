@@ -28,10 +28,29 @@
 .sectionCard h2{
     color: #fff;
     font-family: 'Sansation Light';
+    font-size: 1rem;
 }
 
 .sectionCard p {
     color: #ccc;
     text-align: center;
     font-family: 'Sansation Light';
+}
+
+@media only screen and (max-width: 1024px) {
+    .sectionCard h2 {
+        font-size: 3rem;
+    }
+    .sectionCard p {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sectionCard h2 {
+        font-size: 5rem;
+    }
+    .sectionCard p {
+        font-size: 4rem;
+    }
 }

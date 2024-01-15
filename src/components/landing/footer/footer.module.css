@@ -54,7 +54,11 @@
     justify-content: space-between;
 }
 
-@media only screen and (max-width: 800px) {
+.footerCards span {
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
     .footer {
         flex-direction: column;
         align-items: center;
@@ -63,7 +67,7 @@
     .footerCards {
         gap: 50px;
     }
-    .footerCard {
-        font-size: 1.5rem;
+    .footerCard span {
+        font-size: 3rem;
     }
 }

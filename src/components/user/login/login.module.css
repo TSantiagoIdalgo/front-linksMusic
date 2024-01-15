@@ -1,3 +1,5 @@
+
+
 .login {
     background: rgb(50,50,50);
     background: linear-gradient(180deg, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
@@ -41,7 +43,10 @@
 .login_google_button {
     width: 450px;
     height: 60px;
-    font-size: 20px;
+}
+
+.login_google_button span {
+    font-size: 1rem;
 }
 
 .login_facebook_button {
@@ -77,5 +82,12 @@
         margin-top: 0;
         border-radius: 0;
         background-color: #0008;
+    }
+
+    .login_facebook_button, .login_google_button {
+        width: 90vw;
+    }
+    .login_google_button span {
+        font-size: 3rem;
     }
 }

@@ -29,7 +29,7 @@
 }
 
 .main_info_text p{
-    font-size: 2.5vw;
+    font-size: 3rem;
     color: #eee;
 }
 
@@ -67,6 +67,6 @@
         padding: 10px;
     }
     .main_info_text p {
-        font-size: 2rem;
+        font-size: 6rem;
     }
 }
