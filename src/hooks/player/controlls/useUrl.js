@@ -15,7 +15,7 @@ export const useUrl = () => {
         dispatch(getUrlRequest())
         try {
           const apiKey = 'AIzaSyD0HbIzjRf6SLGPv0qM_36T-lpDtbdxumk'
-          const videoId = formState.url.split('v=')[1]
+          const videoId = formState.url.split('v=')[1] ?? formState.url.split('/')[3].split('?')[0]
           const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`
 
           const { data } = await axios.get(url)
