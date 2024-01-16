@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { useQuery } from "@apollo/client";
 import { GET_USER_MUSIC } from '../../graphql/query/music/getMusic'
 import { getMusic } from "../../state/features/music/musicSlice";
+import { fileType } from '../../helpers/musicType'
 
 export const useUpload = () => {
     const [loading, setLoading] = useState(false)
@@ -17,9 +18,11 @@ export const useUpload = () => {
 
 
     async function upload(file) {
-      setLoading(true)
-      Click()
+
       try {
+        if (fileType(file)) return Error('File type is not supported')
+        setLoading(true)
+        Click()
         const formData = new FormData();
         formData.append("files", file);
         formData.append("userId", userId);

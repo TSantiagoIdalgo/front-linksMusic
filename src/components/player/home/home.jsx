@@ -6,7 +6,7 @@ export default function Home() {
     const { music, loading, error } = useMusic();
 
     if (loading) return <p>Loading...</p>
-    if (error) return <p>{error}</p>
+    if (error) return <p>{error.message}</p>
 
     return (
         <main className={Style.home}>
