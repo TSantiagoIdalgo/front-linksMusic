@@ -4,6 +4,7 @@ import libraryIcon from '../../../assets/icons/player/library.png'
 import addIcon from '../../../assets/icons/player/add.png'
 import newIcon from '../../../assets/icons/player/new.png'
 import Style from './sidebar.module.css'
+import Playlists from "./playlist/playlist"
 
 export default function SideBar () {
     return (
@@ -14,6 +15,7 @@ export default function SideBar () {
               <ThirdButton img={addIcon} text={'Add song'} type='button' navigate={'/musicplayer/addsong'}/>
               <div className={Style.sidebar_middle}/>
               <ThirdButton img={newIcon} text={'New playlist'} type='button' navigate={'/musicplayer/newplaylist'}/>
+              <Playlists/>
             </div>
         </section>
     )

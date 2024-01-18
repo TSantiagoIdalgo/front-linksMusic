@@ -1,0 +1,32 @@
+.playlist_info {
+    display: flex;
+    gap: 30px;
+    color: #fff;
+
+}
+
+.playlist_info_img {
+    width: 250px;
+    height: 200px;
+    background-color: #323232;
+    border-radius: 4px;
+}
+
+.playlist_info_title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.playlist_info_title h2 {
+    font-size: 2rem;
+}
+
+.playlist_info_title p {
+    font-size: 1rem;
+}
+
+.playlist_info_title span {
+    align-self: self-end;
+}

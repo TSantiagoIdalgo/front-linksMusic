@@ -25,7 +25,8 @@ export const useUploadURL = () => {
             }
             await axios.post('http://localhost:4000/files/url', datas)
             await response.refetch()
-            dispatch(getMusic(response.data.getUserMusic))
+            
+            if (response.data) dispatch(getMusic(response.data.getUserMusic))
             dispatch(cleanUploading())
             Finish()
         } catch (error) {
