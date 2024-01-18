@@ -40,3 +40,17 @@ export const Error = (error) => Toastify({
         background: "#7648ff",
     },
   }).showToast();
+
+
+  export const Personal = (message) => Toastify({
+    text: message,
+    duration: 3000,
+    newWindow: true,
+    close: false,
+    gravity: "bottom", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+        background: "#7648ff",
+    },
+  }).showToast();

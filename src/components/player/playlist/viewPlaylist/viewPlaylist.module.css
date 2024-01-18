@@ -9,3 +9,13 @@
     width: calc(100% - 100px);
     margin: 50px;
 }
+
+.playlist_music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    gap: 20px;
+}

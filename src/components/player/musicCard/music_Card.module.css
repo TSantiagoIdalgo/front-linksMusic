@@ -1,3 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
 .cardMusic {
     display: flex;
     color: #fff;
@@ -59,6 +66,22 @@
 .undef img{
     width: 50px;
     filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+}
+
+.cardMusic_prop {
+    display: flex;
+    align-items: center;
+}
+
+.cardMusic_prop {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 2.2rem;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 500;
 }
 
 @media only screen and (max-width: 600px) {
