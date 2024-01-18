@@ -10,7 +10,7 @@ export default function MusicCardPortal({ id, name, handlePortal }) {
     const [playlist, handlePlaylist] = useState(true)
     const { getDownloadUrl } = useDownload()
     const { handleDelete } = useDelete()
-    console.log(0);
+
     return (
         <div className={Style.music_portal}>
             {playlist
