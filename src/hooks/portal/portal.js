@@ -27,8 +27,7 @@ export function useDownload() {
           document.body.removeChild(link);
           Personal('Downloaded!')
         } catch (error) {
-           console.log(error); 
-           Personal('Error!')
+           Personal(error.message)
         }
     }
 

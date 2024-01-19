@@ -1,0 +1,38 @@
+.playlist_info_title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+}
+
+.playlist_info_title h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid transparent;
+}
+
+.playlist_info_title p {
+    font-size: 1rem;
+    line-height: 20px;
+    height: 90%;
+    border-bottom: 2px solid transparent;
+}
+
+.playlist_info_title span {
+    align-self: self-end;
+    font-size: 1rem;
+    color: #7648ffc7;
+}
+
+.playlist_edit {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+    right: 0;
+    cursor: pointer;
+}
+.playlist_edit:hover {
+    filter: brightness(0) saturate(100%) invert(90%) sepia(11%) saturate(29%) hue-rotate(325deg) brightness(85%) contrast(104%);
+}

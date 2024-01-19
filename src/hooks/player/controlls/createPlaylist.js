@@ -7,6 +7,7 @@ import { jwtDecode } from 'jwt-decode'
 import { playlistSchema } from '../../validates/playlistSchema'
 import { useQuery } from '@apollo/client'
 import { GET_USER_PLAYLIST } from '../../graphql/query/music/getPlaylist'
+import { Personal } from '../../helpers/user/modals'
 
 export const useCreatePlaylist = () => {
     const userId = jwtDecode(window.localStorage.getItem('USER_INFO')).email
@@ -22,6 +23,7 @@ export const useCreatePlaylist = () => {
     })
 
     async function onSubmit(data) {
+        Personal('Creating...')
         try {
             setLoading(true)
             await createPlaylist({
@@ -33,6 +35,7 @@ export const useCreatePlaylist = () => {
             })
             await refetch()
             setLoading(false)
+            Personal('Created!')
             reset()
         } catch (error) {
             setError('tittle', {

@@ -1,24 +1,37 @@
 import Style from './playlistInfo.module.css'
-import { jwtDecode } from 'jwt-decode';
+import PlaylistEdit from '../playlistEdit/playlistEdit';
+import PlaylistTittle from '../playlistTittle/playlistTittle';
 import undefIcon from '../../../../../assets/icons/player/undefinedIcon.png'
 
+import { useState } from 'react';
 export default function PlaylistInfo ({ data }) {
-    
-    const userId = jwtDecode(window.localStorage.getItem('USER_INFO')).userName;
-    const music = data.getPlaylistMusic.music
+  const music = data.getPlaylistMusic.music
+  
+  const [edit, handleEdit] = useState(false)
+  
     return (
       <article className={Style.playlist_info}>
-        <div className={`${music.length === 1 ? Style.playlist_info_i : Style.playlist_info_img}`}>
-          {music.length === 0 && <img src={undefIcon} alt='undef' className={Style.undef}/>}
-          {music.map(music => (
-            <img key={music.id} src={music.image} alt={music.name} className={Style.playlist_info_image}/>
-          )).slice(0, 4)}
-        </div>
-        <div className={Style.playlist_info_title}>
-          <h2>{data.getPlaylistMusic.tittle}</h2>
-          <p>{data.getPlaylistMusic.description}</p>
-          <span>{userId}</span>
-        </div>
+        {music.length === 0
+        ? <div className={Style.undef_container}>
+            <img src={undefIcon} alt='undef' className={Style.undef}/>
+          </div>
+        : <div className={`${music.length === 1 ? Style.playlist_info_i : Style.playlist_info_img}`}>
+            {music.map(music => (
+              <img key={music.id} src={music.image} alt={music.name} className={Style.playlist_info_image}/>
+            )).slice(0, 4)}
+          </div>}
+        {edit
+        ? <PlaylistEdit 
+            id={data.getPlaylistMusic.id} 
+            handleEdit={handleEdit}
+            description={data.getPlaylistMusic.description}
+            tittle={data.getPlaylistMusic.tittle} />
+        : <PlaylistTittle 
+            tittle={data.getPlaylistMusic.tittle} 
+            description={data.getPlaylistMusic.description} 
+            handleEdit={() => handleEdit(true)}/>}
       </article>
     )
 }
+
+// {music.length === 0 && }

@@ -52,5 +52,6 @@ export const Error = (error) => Toastify({
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
         background: "#7648ff",
+        fontSize: "1rem",
     },
   }).showToast();

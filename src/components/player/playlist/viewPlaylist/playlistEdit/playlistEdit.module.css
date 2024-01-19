@@ -1,0 +1,86 @@
+
+.playlist_info_edit {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+}
+
+.playlist_info_edit span {
+    font-size: 1rem;
+    color: #7648ffc7;
+}
+
+.playlist_info_edit input:first-child {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    color: #fff;
+    width: max-content;
+    font-size: 2rem;
+    position: relative;
+}
+
+.playlist_info_edit textarea {
+    height: 90%;
+    line-height: 20px;
+    font-size: 1rem; 
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+}
+
+.playlist_userId{
+    align-self: self-end;
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+.playlist_edit_button {
+    position: absolute;
+    right: 40px;
+    background-color: #7648ffc7;
+    border-radius: 6px;
+    padding: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.playlist_edit_button:hover {
+    background-color: #7648ffaa;
+}
+
+.playlist_edit {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+    right: 0;
+    cursor: pointer;
+}
+.playlist_edit:hover {
+    filter: brightness(0) saturate(100%) invert(90%) sepia(11%) saturate(29%) hue-rotate(325deg) brightness(85%) contrast(104%);
+}
+
+.playlist_delete {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) saturate(100%) invert(9%) sepia(84%) saturate(7369%) hue-rotate(19deg) brightness(89%) contrast(122%);
+    right: 90px;
+    cursor: pointer;
+}
+
+.playlist_delete:hover {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(60%) saturate(7439%) hue-rotate(6deg) brightness(89%) contrast(128%);
+}
