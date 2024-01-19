@@ -5,19 +5,15 @@ import { CREATE_PLAYLIST } from '../../../hooks/graphql/mutation/playlist/create
 import { zodResolver } from '@hookform/resolvers/zod'
 import { jwtDecode } from 'jwt-decode'
 import { playlistSchema } from '../../validates/playlistSchema'
-import { useQuery } from '@apollo/client'
 import { GET_USER_PLAYLIST } from '../../graphql/query/music/getPlaylist'
 import { Personal } from '../../helpers/user/modals'
 
 export const useCreatePlaylist = () => {
     const userId = jwtDecode(window.localStorage.getItem('USER_INFO')).email
     const [loading, setLoading] = useState(false)
-    const { refetch } = useQuery(GET_USER_PLAYLIST, {
-        variables: {
-            getUserPlaylistId: userId
-        }
+    const [createPlaylist] = useMutation(CREATE_PLAYLIST, {
+        refetchQueries: [{ query: GET_USER_PLAYLIST, variables: { getUserPlaylistId: userId } }]
     })
-    const [createPlaylist] = useMutation(CREATE_PLAYLIST)
     const { register, handleSubmit, formState: { errors }, setError, reset } = useForm({
         resolver: zodResolver(playlistSchema)
     })
@@ -33,7 +29,6 @@ export const useCreatePlaylist = () => {
                     description: data.description
                 }
             })
-            await refetch()
             setLoading(false)
             Personal('Created!')
             reset()
