@@ -7,8 +7,9 @@ import { getPlayRequest, getPlay, getPlayFailure } from '../state/features/music
 export const usePlayCurrent = (music, id) => {
     const [getUrl] = useLazyQuery(GET_MUSIC_URL)
     const dispatch = useDispatch();
-
+    
     async function getMusicUrl() {
+      if (!music || !id) return;
         dispatch(getPlayRequest())
         try {
           const email = jwtDecode(window.localStorage.getItem('USER_INFO')).email;

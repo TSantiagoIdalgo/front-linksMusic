@@ -10,18 +10,17 @@ import "./main.css"
 
 export default function PlayerMain () {
     const { data, loading, error } = useQuery(TOKEN_VERIFY, {
-        variables: {token: window.localStorage.getItem('USER_INFO') || window.sessionStorage.getItem('USER_INFO')}  
+        variables: {token: window.localStorage.getItem('USER_INFO') || window.sessionStorage.getItem('USER_INFO')},
+        pollInterval: 3600000,  
     })
     useEffect(() => {
         if (error) window.location.href = '/login'
         if (data) {
-            if (data.userTokenVerify === false) {
-                window.location.href = '/login'
-            }
+            if (data.userTokenVerify === false) window.location.href = '/login'
         }
         return () => {}
     },[])
-    if (loading) return <p>Loading...</p>
+    if (loading) return <p></p>
     return (
         <div className="container">
             <NavPlayer/>
