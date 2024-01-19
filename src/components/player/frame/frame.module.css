@@ -76,3 +76,33 @@
 .videoData_buttons button:nth-child(2):disabled {
     background-color: #7648ff99;
 }
+
+@media only screen and (max-width: 1024px) {
+    .frame_data h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .frame_data p {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .videoData_buttons button:first-child,
+    .videoData_buttons button:nth-child(2) {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .frame_data h2 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .frame_data p {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .videoData_buttons button:first-child,
+    .videoData_buttons button:nth-child(2) {
+        font-size: 3rem;
+    }
+}

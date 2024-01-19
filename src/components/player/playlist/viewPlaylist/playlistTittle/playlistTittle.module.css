@@ -36,3 +36,36 @@
 .playlist_edit:hover {
     filter: brightness(0) saturate(100%) invert(90%) sepia(11%) saturate(29%) hue-rotate(325deg) brightness(85%) contrast(104%);
 }
+
+@media only screen and (max-width: 1024px) {
+    .playlist_info_title h2 {
+        font-size: 2.5rem;
+        width: 90%;
+    }
+    .playlist_info_title p {
+        font-size: 1.8rem;
+    }
+    .playlist_info_title span {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .playlist_info_title {
+        gap: 5px;
+    }   
+
+    .playlist_info_title h2 {
+        font-size: 4rem;
+        width: 90%;
+    }
+    .playlist_info_title p {
+        line-height: 15px;
+        height: 100%;
+        font-size: 3rem;
+        overflow: hidden;
+    }
+    .playlist_info_title span {
+        font-size: 2.2rem;
+    }
+}

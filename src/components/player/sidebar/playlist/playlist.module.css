@@ -18,11 +18,15 @@
     padding: 10px;
     border-radius: 12px;
     cursor: pointer;
+    
+    overflow: hidden;
 }
 
 .playlist h2 {
     font-size: 1rem;
-    text-overflow: clip;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .playlist img {

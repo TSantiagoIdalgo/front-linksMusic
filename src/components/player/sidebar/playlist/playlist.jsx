@@ -12,7 +12,7 @@ const Playlists = () => {
             getUserPlaylistId: userId
         }
     })
-    if (loading || !data || error) return null
+    if (loading || !data || data.length === 0 || error) return null
 
     return (
         <div className={Style.container}>

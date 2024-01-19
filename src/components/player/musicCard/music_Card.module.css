@@ -82,6 +82,21 @@
     width: 20px;
 }
 
+@media only screen and (max-width: 1024px) {
+    .card_tittle h2 {
+        font-size: 1.5rem;
+    }
+    .card_tittle h3 {
+        font-size: 1rem;
+    }
+    .cardMusic_prop {
+        font-size: 4rem;
+    }
+    .cardMusic h3 {
+        font-size: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .container {
         width: 100%;
