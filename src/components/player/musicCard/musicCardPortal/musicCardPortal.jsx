@@ -10,7 +10,6 @@ export default function MusicCardPortal({ id, name, handlePortal }) {
     const [playlist, handlePlaylist] = useState(true)
     const { getDownloadUrl } = useDownload()
     const { handleDelete } = useDelete()
-
     return (
         <div className={Style.music_portal}>
             {playlist
@@ -31,9 +30,9 @@ export default function MusicCardPortal({ id, name, handlePortal }) {
 
 const PortalButton = ({ tittle, onClick, img }) => {
     return (
-        <div className={Style.button}>
+        <div className={Style.button} onClick={onClick}>
             <img src={img} alt={tittle} />
-            <button onClick={onClick}>{tittle}</button>
+            <button>{tittle}</button>
         </div>
     )
 }
