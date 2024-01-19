@@ -13,7 +13,7 @@ export default function MusicDropzone() {
     return (
     <div className={Style.dropzoneContainer}>
         <div className={Style.dropzone} {...getRootProps()}>
-        <input {...getInputProps()} />
+        <input {...getInputProps()}/>
             <div className={Style.dropzone_drop}>
                 { isDragActive
                  ? <img src={uploadIcon} alt="archive" className={Style.dropzone_drop_i} />

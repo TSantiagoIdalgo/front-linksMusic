@@ -20,10 +20,15 @@
     align-items: baseline;
 }
 
+.container_title h1{
+    text-align: center;
+}
+
 .close_portal{
     color: #fff;
     font-size: 2rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin: 20px;
 }

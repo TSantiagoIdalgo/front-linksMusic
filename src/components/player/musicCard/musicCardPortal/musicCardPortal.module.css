@@ -30,6 +30,9 @@
     color: #fff;
     font-size: 1rem;
     margin-top: 20px;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .container_title {

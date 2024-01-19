@@ -19,3 +19,12 @@
     margin-top: 50px;
     gap: 20px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .playlist {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+    }
+}

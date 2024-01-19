@@ -8,9 +8,9 @@ import undefinedIcon from '../../../assets/icons/player/undefinedIcon.png'
 
 export default function MusicCard(music) {
   const { id, name, album, duration, image } = music.music;
-  const width = useWindowSize();
   const [portal, handlePortal] = useState(false);
   const { getMusicUrl } = usePlayCurrent(music.music, id);
+  const width = useWindowSize();
 
     function secondsToMinutes(seg) {
       let segundos = parseInt(seg)
@@ -37,8 +37,8 @@ export default function MusicCard(music) {
         {width >= 1024 && <h3>{album}</h3>}
         <h3>{secondsToMinutes(duration)}</h3>
     </figure>
-    <button onClick={() => handlePortal(true)} className={Style.cardMusic_prop}>...</button>
-    {portal && 
+      <button onClick={() => handlePortal(true)} className={Style.cardMusic_prop}>...</button>
+      {portal && 
       ReactDOM.createPortal(<MusicCardPortal id={id} name={name} handlePortal={handlePortal}/>, 
       document.querySelector('#portal'))}
     </div>

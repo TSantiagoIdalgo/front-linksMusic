@@ -16,7 +16,7 @@ export default function Audio({ volumeChange, volume }) {
       setBackgroundWidth(thumbPosition);
   }, [volume])
     return (
-        <div className={Style.audio} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
+        <div className={Style.audio} onClick={() => setVisible(!visible)} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
             <div className={Style.audio_change}>
                 <img src={volumeIcon} alt="volue" />
                 <input
