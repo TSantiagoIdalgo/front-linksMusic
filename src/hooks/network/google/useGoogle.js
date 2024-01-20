@@ -6,7 +6,7 @@ import { GOOGLE_LOGIN } from "../../graphql/query/user/userLogin";
 
 export const useGoogle = () => {
     const [getGoogleLogin] = useLazyQuery(GOOGLE_LOGIN)
-    const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID
+    const clientId = '654052421207-ief4rgglhtm845m7nt1s3jn0u32qkja2.apps.googleusercontent.com'
     
     useEffect(() => {
         const start = () => {
