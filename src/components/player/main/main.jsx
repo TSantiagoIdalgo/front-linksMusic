@@ -1,6 +1,5 @@
 import { TOKEN_VERIFY } from "../../../hooks/graphql/query/user/tokenVerify"
 import { useEffect } from "react"
-import { useSelector } from "react-redux"
 import { useQuery } from "@apollo/client"
 import NavPlayer from "../nav/nav"
 import SideBar from "../sidebar/sidebar"
@@ -20,7 +19,8 @@ export default function PlayerMain () {
         }
         return () => {}
     },[])
-    if (loading) return <p></p>
+    if (error) window.location.href = '/login'
+    if (loading) return null
     return (
         <div className="container">
             <NavPlayer/>
