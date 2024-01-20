@@ -25,7 +25,7 @@ export const useGoogle = () => {
 
         window.localStorage.setItem('user', imageUrl)
         window.localStorage.setItem('USER_INFO', result.data.getUserNetworkLogin)
-        window.location.href = '/'
+        window.location.href = 'http://localhost:5173/'
     }
 
     function signFailure(data) {

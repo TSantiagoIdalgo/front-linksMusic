@@ -26,7 +26,7 @@ export const useUpload = () => {
         const formData = new FormData();
         formData.append("files", file);
         formData.append("userId", userId);
-        await axios.post("https://back-linksmusic.onrender.com/files/upload", formData);
+        await axios.post("http://localhost:4000/files/upload", formData);
         await refetch()
         dispatch(getMusic(data.getUserMusic))
         setLoading(false)
