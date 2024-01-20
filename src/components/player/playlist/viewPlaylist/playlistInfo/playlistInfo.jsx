@@ -17,7 +17,11 @@ export default function PlaylistInfo ({ data }) {
           </div>
         : <div className={`${music.length === 1 ? Style.playlist_info_i : Style.playlist_info_img}`}>
             {music.map(music => (
-              <img key={music.id} src={music.image} alt={music.name} className={Style.playlist_info_image}/>
+              <>
+                {music.image !== null
+                ? <img src={music.image} alt={music.name} className={Style.playlist_info_image}/>
+                : <img src={undefIcon} alt='undef' className={Style.playlist_info_undef}/>}
+              </>
             )).slice(0, 4)}
           </div>}
         {edit

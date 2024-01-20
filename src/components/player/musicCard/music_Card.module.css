@@ -24,6 +24,7 @@
 .card_tittle {
     display: flex;
     align-items: center;
+    align-items: center;
     gap: 20px;
     width: 33%;
 }
@@ -34,6 +35,8 @@
 }
 
 .card_tittle h2{
+    width: 150px;
+    font-size: 1rem;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -59,7 +62,7 @@
 }
 
 .undef {
-    width: 145px;
+    width: 80px;
     margin-left: 20px;
     height: 100%;
 }
@@ -81,6 +84,7 @@
     z-index: 500;
     width: 20px;
 }
+
 
 @media only screen and (max-width: 1024px) {
     .card_tittle h2 {

@@ -10,16 +10,17 @@ const Nav = () => {
   const [handle, handleChange] = useState(false)
   const widthVW = useWindowSize()
   const userImg = window.localStorage.getItem('user')
+  const token = window.localStorage.getItem('USER_INFO')
 
   return (
     <nav className={Style.nav}>
       <Logo/>
       {widthVW >= 800 
       ? <div className={Style.navLinks}>
-         {userImg !== null ? <NavLink to='/musicplayer/home'>Music Player</NavLink> : <NavLink to='/login'>Music Player</NavLink>}
+         {token !== null ? <NavLink to='/musicplayer/home'>Music Player</NavLink> : <NavLink to='/login'>Music Player</NavLink>}
          <NavLink to='#'>Download</NavLink>
          <NavLink to='#'>About</NavLink>
-         <NavLink to={`${userImg !== null ? '/musicPlayer/home' : '/login'}`} className={Style.userIcon}>
+         <NavLink to={`${token !== null ? '/musicPlayer/home' : '/login'}`} className={Style.userIcon}>
           { userImg !== null 
           ? <img src={userImg} alt='user img' className={Style.user_picture_active}/>
           : <img src={userIcon} alt='user icon' className={Style.user_picture}/>}

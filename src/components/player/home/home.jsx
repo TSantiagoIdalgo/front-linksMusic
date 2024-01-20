@@ -5,7 +5,6 @@ import nosongImg from '../../../assets/icons/player/nosong.png'
 
 export default function Home() {
     const { music, loading, error } = useMusic();
-    
 
     if (loading) return <p>Loading...</p>
     if (error) return (
@@ -17,7 +16,7 @@ export default function Home() {
 
     return (
         <main className={Style.home}>
-            {music.data?.map((music) => (
+            {music?.map((music) => (
                 <MusicCard key={music.id} music={music} />
             ))}
         </main>

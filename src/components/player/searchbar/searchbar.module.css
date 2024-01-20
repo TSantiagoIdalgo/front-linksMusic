@@ -94,7 +94,7 @@
 @media only screen and (max-width: 1024px) {
     .searchItems {
         width: 80vw;
-        left: -15vw;
+        left: -20vw;
     }
     .searchItem h2 {
         font-size: 2rem;
@@ -107,7 +107,7 @@
 @media only screen and (max-width: 600px) {
     .searchItems {
         width: 100vw;
-        left: -31vw;
+        left: -34vw;
     }
 
     .searchItem h2 {

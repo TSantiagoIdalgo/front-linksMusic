@@ -32,3 +32,13 @@
     cursor: pointer;
     margin: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .container_title h1 {
+        font-size: 4rem;
+    }
+    .close_portal {
+        font-size: 7rem;
+    }
+    
+}

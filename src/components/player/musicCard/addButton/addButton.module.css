@@ -51,3 +51,10 @@
        color: #fff;
        cursor: pointer;
    }
+
+   @media only screen and (max-width: 600px) {
+    .notcheck button,
+    .check button {
+        font-size: 3.5rem;
+    }
+}
