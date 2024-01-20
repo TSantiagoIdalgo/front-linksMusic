@@ -51,7 +51,7 @@
 
 .userIcon img{
     width: 120px;
-    filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(4%) hue-rotate(61deg) brightness(106%) contrast(100%);
+    border-radius: 50%;
     cursor: pointer;
 }
 
