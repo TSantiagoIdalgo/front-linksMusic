@@ -10,7 +10,7 @@ const client = new ApolloClient({
     connectToDevTools: true,
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: 'https://back-linksmusic.onrender.com/graphql'
+      uri: 'https://dcv88hhl-4000.brs.devtunnels.ms/graphql'
     })
 })
 

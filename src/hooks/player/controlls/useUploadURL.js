@@ -23,7 +23,7 @@ export const useUploadURL = () => {
                 id: data.url,
                 userId: userId
             }
-            await axios.post('https://back-linksmusic.onrender.com/files/url', datas)
+            await axios.post('https://dcv88hhl-4000.brs.devtunnels.ms/files/url', datas)
             await response.refetch()
             dispatch(cleanUploading())
             Finish()
@@ -52,7 +52,7 @@ export const useUploadByVideo = () => {
                 id: url.split('v=')[1],
                 userId: userId
             }
-            await axios.post('https://back-linksmusic.onrender.com/files/url', datas)
+            await axios.post('https://dcv88hhl-4000.brs.devtunnels.ms//files/url', datas)
             await response.refetch()
             dispatch(cleanUploading())
             Finish()
