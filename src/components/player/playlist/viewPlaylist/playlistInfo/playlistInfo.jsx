@@ -11,19 +11,7 @@ export default function PlaylistInfo ({ data }) {
   
     return (
       <article className={Style.playlist_info}>
-        {music.length === 0
-        ? <div className={Style.undef_container}>
-            <img src={undefIcon} alt='undef' className={Style.undef}/>
-          </div>
-        : <div className={`${music.length === 1 ? Style.playlist_info_i : Style.playlist_info_img}`}>
-            {music.map(music => (
-              <>
-                {music.image !== null
-                ? <img src={music.image} alt={music.name} className={Style.playlist_info_image}/>
-                : <img src={undefIcon} alt='undef' className={Style.playlist_info_undef}/>}
-              </>
-            )).slice(0, 4)}
-          </div>}
+        <MusicPreview music={music}/>
         {edit
         ? <PlaylistEdit 
             id={data.getPlaylistMusic.id} 
@@ -38,4 +26,23 @@ export default function PlaylistInfo ({ data }) {
     )
 }
 
-// {music.length === 0 && }
+export const MusicPreview = ({ music }) => {
+
+  return (
+    <>
+    {music.length === 0
+      ? <div className={Style.undef_container}>
+          <img src={undefIcon} alt='undef' className={Style.undef}/>
+        </div>
+      : <div className={`${music.length === 1 ? Style.playlist_info_i : Style.playlist_info_img}`}>
+          {music.map(music => (
+            <>
+              {music.image !== null
+              ? <img src={music.image} alt={music.name} className={Style.playlist_info_image}/>
+              : <img src={undefIcon} alt='undef' className={Style.playlist_info_undef}/>}
+            </>
+          )).slice(0, 4)}
+        </div>}
+    </>
+  )
+}

@@ -15,7 +15,7 @@ export const useSearch = () => {
     setItems([])
     try {
       if (event.key === 'Enter') {
-        const apiKey = 'AIzaSyD0HbIzjRf6SLGPv0qM_36T-lpDtbdxumk'
+        const apiKey = 'AIzaSyBAhFLO8-6FfwA3ow0FuVWtdsWVggBmZec'
 
         
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
