@@ -1,6 +1,6 @@
 import Style from './mainSection.module.css'
 import Nav from '../../nav/nav';
-import PhoneImage from '../../../../assets/bg/main-phone.png'
+import PhoneImage from '../../../../assets/bg/main-phone.webp'
 import SecondaryButton from '../../../buttons/secondaryButton/secondaryButton';
 
 const MainSection = () => {
