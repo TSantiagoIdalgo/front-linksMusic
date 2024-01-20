@@ -9,7 +9,7 @@ export const useFacebook = () => {
         const { email, name } = data
         const result = await getGoogleLogin({ variables: { email, userName: name } })
         window.localStorage.setItem('USER_INFO', result.data.getUserNetworkLogin)
-        window.location.href = 'http://localhost:5173/'
+        window.location.href = '/'
     } 
 
     function error (err) {
