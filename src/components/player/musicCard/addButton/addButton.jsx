@@ -1,6 +1,5 @@
 import Style from './addButton.module.css'
 import checkIcon from '../../../../assets/icons/playlist/check.png'
-import notCheckIcon from '../../../../assets/icons/playlist/notCheck.png'
 import { useAddRemove } from '../../../../hooks/playlist/addRemove'
 
 const AddButton = ({ playlist, id }) => {
@@ -16,7 +15,7 @@ const AddButton = ({ playlist, id }) => {
                 <button>{data.getPlaylistMusic.tittle}</button>
               </div>
             : <div className={Style.notcheck} onClick={() => add()}>
-                <img src={notCheckIcon} alt="notcheck" />  
+                <p>not</p> 
                 <button>{data.getPlaylistMusic.tittle}</button>
               </div>}
         </div>
